@@ -1,3 +1,9 @@
 export default function Header() {
-  return <div>header</div>;
+  return (
+    <>
+      <header className="fixed w-full">
+        <nav className=""></nav>
+      </header>
+    </>
+  );
 }
