@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <>
-      <header className="flex flex-row justify-center items-center gap-6 font-thin fixed w-full pt-4 ">
+      <header className="flex flex-row justify-center items-center gap-6 font-thin fixed w-full pt-4 z-10 bg-neutral-950">
         <div className="">
           <i className="ri-apple-fill"></i>
         </div>
