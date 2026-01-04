@@ -67,6 +67,7 @@ export default function Highlights() {
                   className="h-full bg-white"
                   animate={{
                     scaleX: i < index ? 1 : i === index ? progress : 0,
+                    width: 10,
                   }}
                   style={{ transformOrigin: "left" }}
                 />
