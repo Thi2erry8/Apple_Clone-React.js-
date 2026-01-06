@@ -5,7 +5,24 @@ import video3 from "../assets/videos/highlight3.mp4";
 import video4 from "../assets/videos/highlight4.mp4";
 import { motion } from "framer-motion";
 
-const videos = [video1, video2, video3, video4];
+const videos = [
+  {
+    video: video1,
+    text: "Experience the future of technology with our latest innovations.",
+  },
+  {
+    video: video2,
+    text: "Discover the power of our revolutionary design.",
+  },
+  {
+    video: video3,
+    text: "See how our products transform everyday life.",
+  },
+  {
+    video: video4,
+    text: "Join us on a journey to redefine excellence.",
+  },
+];
 
 export default function Highlights() {
   const videoRefs = useRef([]);
