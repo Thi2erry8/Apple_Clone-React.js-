@@ -3,6 +3,7 @@ import video1 from "../assets/videos/highlight1.mp4";
 import video2 from "../assets/videos/highlight2.mp4";
 import video3 from "../assets/videos/highlight3.mp4";
 import video4 from "../assets/videos/highlight4.mp4";
+import trailer from "../assets/videos/trailer.mp4";
 import { easeInOut, motion } from "framer-motion";
 
 const videos = [
@@ -85,12 +86,13 @@ export default function Highlights() {
             <i className="ri-play-circle-line"></i>
           </button>
         </div>
+        {/* Trailer Zone */}
         <motion.div
-          className="absolute w-full h-full top-0 left-0 bg-black z-10 flex flex-col items-center justify-center"
+          className="absolute w-full h-full top-0 left-0 bg-black z-10 flex flex-col items-center justify-start"
           animate={{ translateX: etat ? "0%" : "100%" }}
           transition={{ duration: 0.8, ease: easeInOut }}
         >
-          <div className="w-full flex flex-row justify-end-safe p-3">
+          <div className="w-full flex flex-row justify-end-safe p-3 mb-16">
             <button
               className="text-3xl bg-gray-700 px-1 rounded-3xl cursor-pointer "
               onClick={() => {
@@ -101,8 +103,20 @@ export default function Highlights() {
               <i class="ri-close-fill "></i>
             </button>
           </div>
+          <div className="">
+            <video
+              src={trailer}
+              width="600"
+              height="480"
+              controls
+              autoPlay
+              muted
+              playsInline
+            ></video>
+          </div>
         </motion.div>
-        <div className="relative overflow-hidden w-7/10 h-7/10 rounded-2xl">
+
+        <div className="relative overflow-hidden w-8/10 h-8/10 rounded-2xl">
           <motion.div
             className="flex"
             animate={{ x: `-${index * 100}%` }}
@@ -138,7 +152,7 @@ export default function Highlights() {
           </motion.div>
 
           {/* Controls */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-6">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-6 px-4 py-2 bg-black/40 backdrop-blur-md rounded-3xl">
             {/* Dots */}
             <div className="flex gap-2">
               {videos.map((_, i) => {
@@ -172,9 +186,15 @@ export default function Highlights() {
             {/* Play / Pause */}
             <button
               onClick={() => setIsPlaying((p) => !p)}
-              className="text-white text-lg"
+              className="text-white text-2xl"
             >
-              {isPlaying ? "❚❚" : "▶"}
+              <p>
+                {isPlaying ? (
+                  <i class="ri-pause-mini-line"></i>
+                ) : (
+                  <i class="ri-play-fill"></i>
+                )}
+              </p>
             </button>
           </div>
         </div>
