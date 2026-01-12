@@ -1,9 +1,9 @@
 import pic from "../assets/images/camera.png";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 export default function Camera() {
   return (
     <>
-      <section className="h-screen w-full flex flex-col">
+      <section className="h-screen w-full flex flex-col bg-black items-center justify-center">
         <motion.p
           className="text-2xl font-semibold text-orange-400"
           initial={{ opacity: 0, translateY: 10 }}
@@ -22,11 +22,33 @@ export default function Camera() {
         </motion.h1>
         <div className="w-full flex flex-row">
           <div className="w-7/10">
-            <img src={pic} alt="" />
+            <motion.img
+              initial={{ opacity: 0, translateX: "-100%" }}
+              whileInView={{ opacity: 1, translateX: 0 }}
+              transition={{ duration: 0.7, ease: easeInOut }}
+              src={pic}
+              alt="iphone_picture"
+            />
           </div>
-          <div className="">
-            <motion.div></motion.div>
-          </div>
+
+          <motion.div
+            className="flex flex-col items-start justify-center gap-10"
+            initial={{ opacity: 0, translateX: "100%" }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 0.7, ease: easeInOut }}
+          >
+            <div className="flex flex-col">
+              <p className="text-neutral-400 text-2xl">Up to</p>
+              <h2 className="text-orange-400 text-6xl font-semibold">8x</h2>
+              <p className="text-neutral-400 text-2xl">optical-quality zoom</p>
+            </div>
+
+            <div className="flex flex-col ">
+              <p className="text-neutral-400 text-2xl">All</p>
+              <h2 className="text-orange-400 text-6xl font-semibold">48MP</h2>
+              <p className="text-neutral-400 text-2xl">rear cameras</p>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
