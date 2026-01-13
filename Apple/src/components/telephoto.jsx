@@ -78,7 +78,10 @@ export default function Telephoto() {
           {items.map((item) => (
             <button
               key={item}
-              onClick={handleHover}
+              onClick={(e) => {
+                handleHover(e);
+                setView(item);
+              }}
               className="relative z-10 cursor-pointer mix-blend-difference px-5 py-2 text-neutral-100"
             >
               {item}
@@ -90,9 +93,6 @@ export default function Telephoto() {
             className="absolute z-0 h-full top-0 rounded-full bg-white "
             style={{ left: position.left, width: position.width }}
           />
-        </div>
-        <div className="">
-          <p>{view}</p>
         </div>
       </section>
     </>
