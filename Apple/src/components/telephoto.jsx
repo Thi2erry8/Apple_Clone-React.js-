@@ -65,6 +65,7 @@ export default function Telephoto() {
                   ? { opacity: 1, translateX: "0%", visibility: "visible" }
                   : { visibility: "hidden", opacity: 0, translateX: "-100%" }
               }
+              transition={{ type: "spring", stiffness: 600, damping: 40 }}
               src={image.src}
               alt={image.text}
             />
