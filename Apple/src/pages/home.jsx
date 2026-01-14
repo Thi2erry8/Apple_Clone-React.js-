@@ -15,6 +15,9 @@ export default function Home() {
       <Design />
       <Camera />
       <Telephoto />
+      <h1 className="text-4xl font-semibold bg-black pl-30 pb-4">
+        Pro results down to the pixel.
+      </h1>
       <Pixel />
     </>
   );

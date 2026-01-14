@@ -39,12 +39,17 @@ const images = [
 ];
 export default function pixel() {
   return (
-    <section className="h-screen w-full">
-      {images.map((image) => (
-        <div>
-          <img src={image.src} alt="" />
-          <p>
-            {image.text_1} {image.text_2}
+    <section
+      className="flex bg-black flex-row gap-2 overflow-x-scroll relative h-screen w-full pl-30 [&::-webkit-scrollbar]:hidden
+  [-ms-overflow-style:none]
+  [scrollbar-width:none]"
+    >
+      {images.map((image, index) => (
+        <div key={index} className="h-6/7 w-[50vw] shrink-0">
+          <img className="h-full w-full rounded-4xl" src={image.src} alt="" />
+          <p className="text-xl text-neutral-400 font-semibold">
+            <span className="text-neutral-100">{image.text_1}</span>{" "}
+            {image.text_2}
           </p>
         </div>
       ))}
