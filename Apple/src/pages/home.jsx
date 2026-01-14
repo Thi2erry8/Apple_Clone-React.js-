@@ -5,6 +5,7 @@ import Design from "../components/design";
 import Camera from "../components/camera";
 import Telephoto from "../components/Telephoto";
 import Pixel from "../components/pixel";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         Pro results down to the pixel.
       </h1>
       <Pixel />
+      <Footer />
     </>
   );
 }

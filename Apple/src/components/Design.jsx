@@ -30,6 +30,9 @@ export default function Design() {
         of the new design is a heat-forged aluminum unibody enclosure that
         maximizes performance, battery capacity, and durability.
       </motion.p>
+      <motion.button>
+        <p>Compare iPhone design</p>
+      </motion.button>
     </section>
   );
 }
