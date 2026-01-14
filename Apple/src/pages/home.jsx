@@ -4,6 +4,7 @@ import Highlights from "../components/highlights";
 import Design from "../components/design";
 import Camera from "../components/camera";
 import Telephoto from "../components/Telephoto";
+import Pixel from "../components/pixel";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Design />
       <Camera />
       <Telephoto />
+      <Pixel />
     </>
   );
 }
