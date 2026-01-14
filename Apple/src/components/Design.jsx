@@ -2,7 +2,7 @@ import { easeInOut, motion } from "framer-motion";
 
 export default function Design() {
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center bg-black gap-8">
+    <section className="relative w-full h-screen flex flex-col items-center justify-center bg-black gap-8">
       <motion.p
         className="text-2xl font-semibold text-orange-400"
         initial={{ opacity: 0, translateY: 10 }}
@@ -30,8 +30,12 @@ export default function Design() {
         of the new design is a heat-forged aluminum unibody enclosure that
         maximizes performance, battery capacity, and durability.
       </motion.p>
-      <motion.button>
+      {/* design info */}
+      <motion.div></motion.div>
+
+      <motion.button className="flex text-xl font-semibold flex-row border bg-neutral-500/40 backdrop-blur-sm gap-2 border-neutral-800 px-3 py-2 rounded-full">
         <p>Compare iPhone design</p>
+        <i className="ri-add-line bg-blue-500 rounded-full px-1"></i>
       </motion.button>
     </section>
   );
