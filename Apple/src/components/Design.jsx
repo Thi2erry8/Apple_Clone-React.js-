@@ -1,6 +1,20 @@
 import { easeInOut, motion } from "framer-motion";
 
 export default function Design() {
+  const design = [
+    {
+      pic: "",
+      text: "Innovative design with breakthrough pro performance.",
+    },
+    {
+      pic: "",
+      text: "Super thin. Strikingly light. Shockingly strong.",
+    },
+    {
+      pic: "",
+      text: "Even more delightful.Even more durable.",
+    },
+  ];
   return (
     <section className="relative w-full h-screen flex flex-col items-center justify-center bg-black gap-8">
       <motion.p
@@ -31,7 +45,40 @@ export default function Design() {
         maximizes performance, battery capacity, and durability.
       </motion.p>
       {/* design info */}
-      <motion.div></motion.div>
+      <motion.div className="absolute flex flex-col items-center justify-center z-10 h-full w-full backdrop-blur-sm bg-neutral-900/50 ">
+        <div className="h-full w-3/10 bg-neutral-200 rounded-2xl text-neutral-900 px-3">
+          <div className="h-2/10 flex flex-row items-center justify-between ">
+            <h1 className="text-3xl font-semibold w-7/10">
+              Compare latest iPhone models.
+            </h1>
+            <button className="text-3xl text-neutral-100 bg-neutral-900 rounded-full px-1">
+              <i class="ri-close-line"></i>
+            </button>
+          </div>
+          <div className="h-6/10">
+            <p>iphone 17 pro</p>
+            <p>iphone air</p>
+            <p>iphone 17</p>
+          </div>
+          <div className="h-2/10">
+            <button>
+              <i class="ri-device-line"></i>
+            </button>
+            <button>
+              <i class="ri-camera-3-line"></i>
+            </button>
+            <button>
+              <i class="ri-cpu-line"></i>
+            </button>
+            <button>
+              <i class="ri-battery-line"></i>
+            </button>
+            <button>
+              <i class="ri-money-dollar-circle-line"></i>
+            </button>
+          </div>
+        </div>
+      </motion.div>
 
       <motion.button className="flex text-xl font-semibold flex-row border bg-neutral-500/40 backdrop-blur-sm gap-2 border-neutral-800 px-3 py-2 rounded-full">
         <p>Compare iPhone design</p>
