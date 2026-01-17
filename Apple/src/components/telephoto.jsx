@@ -53,7 +53,7 @@ export default function Telephoto() {
         <div className=" relative w-5/10 h-7/10 bg-black overflow-hidden">
           {images.map((image) => (
             <motion.img
-              className="w-full h-full absolute"
+              className="w-full h-full absolute rounded-xl"
               key={image.text}
               initial={{
                 visibility: "hidden",
@@ -65,7 +65,7 @@ export default function Telephoto() {
                   ? { opacity: 1, translateX: "0%", visibility: "visible" }
                   : { visibility: "hidden", opacity: 0, translateX: "-100%" }
               }
-              transition={{ type: "spring", stiffness: 600, damping: 40 }}
+              transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
               src={image.src}
               alt={image.text}
             />

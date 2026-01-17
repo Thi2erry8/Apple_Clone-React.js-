@@ -71,7 +71,7 @@ export default function Highlights() {
 
   return (
     <>
-      <section className="relative flex flex-col items-center justify-center w-full h-screen  overflow-hidden">
+      <section className="relative flex flex-col items-center justify-center w-full h-screen  overflow-hidden bg-black">
         <div className="w-full flex flex-row items-center justify-between px-8 mb-6">
           <h1 className="text-6xl font-semibold">Get the highlights.</h1>
 
