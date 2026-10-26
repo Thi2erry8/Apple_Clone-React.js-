@@ -49,11 +49,11 @@ export default function Telephoto() {
   }, []);
   return (
     <>
-      <section className="w-full h-screen flex flex-col items-center justify-center gap-4">
-        <div className=" relative w-5/10 h-7/10 bg-black overflow-hidden">
+      <section className="w-full h-screen flex flex-col items-center justify-center gap-4 overflow-hidden">
+        <div className=" relative w-8/10 lg:w-3/10 h-5/10 md:h-7/10 bg-black overflow-hidden">
           {images.map((image) => (
             <motion.img
-              className="w-full h-full absolute rounded-xl"
+              className="w-full h-auto md:h-full absolute rounded-xl"
               key={image.text}
               initial={{
                 visibility: "hidden",
@@ -74,7 +74,7 @@ export default function Telephoto() {
 
         <div
           ref={containerRef}
-          className="relative text-sm flex flex-row  bg-neutral-900  rounded-full px-3.5"
+          className="relative text-sm flex flex-row  bg-neutral-900  rounded-full md:px-3.5"
         >
           {items.map((item) => (
             <button
@@ -83,7 +83,7 @@ export default function Telephoto() {
                 handleHover(e);
                 setView(item);
               }}
-              className="relative z-10 cursor-pointer mix-blend-difference px-5 py-2 text-neutral-100"
+              className="relative z-8 cursor-pointer mix-blend-difference px-2 py-1 md:px-5 md:py-2 text-neutral-100"
             >
               {item}
             </button>

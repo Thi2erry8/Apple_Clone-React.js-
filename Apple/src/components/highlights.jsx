@@ -73,7 +73,9 @@ export default function Highlights() {
     <>
       <section className="relative flex flex-col items-center justify-center w-full h-screen  overflow-hidden bg-black">
         <div className="w-full flex flex-row items-center justify-between px-8 mb-6">
-          <h1 className="text-6xl font-semibold">Get the highlights.</h1>
+          <h1 className="text-4xl md:text-6xl font font-semibold">
+            Get the highlights.
+          </h1>
 
           <button
             className="text-blue-500 cursor-pointer underline-offset-1 flex flex-row"
@@ -116,9 +118,9 @@ export default function Highlights() {
           </div>
         </motion.div>
 
-        <div className="relative overflow-hidden w-8/10 h-8/10 rounded-2xl">
+        <div className="relative overflow-hidden w-8/10 h-8/10 flex rounded-2xl">
           <motion.div
-            className="flex"
+            className="flex mt-24 lg:mt-0"
             animate={{ x: `-${index * 100}%` }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
@@ -152,7 +154,7 @@ export default function Highlights() {
           </motion.div>
 
           {/* Controls */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-6 px-4 py-2 bg-black/40 backdrop-blur-md rounded-3xl">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-6 mb-64 lg:mb-0 px-4 py-2 bg-black/40 backdrop-blur-md rounded-3xl">
             {/* Dots */}
             <div className="flex gap-2">
               {videos.map((_, i) => {

@@ -137,7 +137,7 @@ export default function Design() {
         Design
       </motion.p>
       <motion.h1
-        className="text-7xl text-center font-semibold w-3/5 "
+        className="text-5xl md:text-7xl w-4/5 text-center font-semibold md:w-3/5 "
         initial={{ opacity: 0, translateY: 10 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 0.7, ease: easeInOut, delay: 0.3 }}
@@ -145,7 +145,7 @@ export default function Design() {
         Unibody enclosure. Makes a strong case for itself.
       </motion.h1>
       <motion.p
-        className="text-2xl text-neutral-400 w-3/5 text-center"
+        className="text-2xl text-neutral-400 w-4/5 md:w-3/5 text-center"
         initial={{ opacity: 0, translateY: 10 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 0.7, ease: easeInOut, delay: 0.6 }}
@@ -166,7 +166,7 @@ export default function Design() {
         transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
         className="absolute flex flex-col items-center justify-center z-10 h-full w-full backdrop-blur-sm bg-neutral-900/50 "
       >
-        <div className="h-full w-3/10 bg-neutral-50 rounded-2xl text-neutral-900 font-semibold px-3">
+        <div className="h-full w-9/10 md:w-6/10 lg:w-3/10 bg-neutral-50 rounded-2xl text-neutral-900 font-semibold px-3">
           <div className="h-2/10 flex flex-row items-center justify-between ">
             <h1 className="text-3xl font-semibold w-7/10">
               Compare latest iPhone models.
@@ -184,7 +184,7 @@ export default function Design() {
   [-ms-overflow-style:none]
   [scrollbar-width:none]"
           >
-            <div className=" absolute z-15 pt-1.5  h-full flex flex-col items-start justify-start text-lg gap-26.5">
+            <div className=" absolute z-15 hidden  pt-1.5  h-full lg:flex flex-col items-start justify-start text-lg gap-26.5">
               <p>iphone 17 pro</p>
               <p>iphone air</p>
               <p>iphone 17</p>
