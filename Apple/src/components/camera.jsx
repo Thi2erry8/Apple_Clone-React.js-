@@ -1,4 +1,4 @@
-import pic from "../assets/images/camera.png";
+import pic from "../assets/images/Camera.png";
 import { easeInOut, motion } from "framer-motion";
 export default function Camera() {
   return (
