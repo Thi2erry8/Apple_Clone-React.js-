@@ -7,7 +7,6 @@ import pic3 from "../assets/images/48mm.jpg";
 import pic5 from "../assets/images/35mm.jpg";
 import pic6 from "../assets/images/24mm.jpg";
 import pic7 from "../assets/images/13mm.jpg";
-import pic8 from "../assets/images/Macro.jpg";
 
 const images = [
   { src: pic1, text: "200mm" },
@@ -16,10 +15,9 @@ const images = [
   { src: pic5, text: "35mm" },
   { src: pic6, text: "24mm" },
   { src: pic7, text: "13mm" },
-  { src: pic8, text: "macro" },
 ];
 
-const items = ["200mm", "100mm", "48mm", "35mm", "24mm", "13mm", "macro"];
+const items = ["200mm", "100mm", "48mm", "35mm", "24mm", "13mm"];
 
 export default function Telephoto() {
   const containerRef = useRef(null);
