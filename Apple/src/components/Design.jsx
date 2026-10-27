@@ -184,11 +184,11 @@ export default function Design() {
   [-ms-overflow-style:none]
   [scrollbar-width:none]"
           >
-            <div className=" absolute z-15 hidden  pt-1.5  h-full lg:flex flex-col items-start justify-start text-lg gap-26.5">
+            {/* <div className=" absolute z-15 hidden  pt-1.5  h-full lg:flex flex-col items-start justify-start text-lg gap-26.5">
               <p>iphone 17 pro</p>
               <p>iphone air</p>
               <p>iphone 17</p>
-            </div>
+            </div> */}
             <div
               className="relative w-full h-full
             "
